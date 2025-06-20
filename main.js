@@ -59,11 +59,11 @@ async function sendToDiscord(data) {
     }));
 
   await webhook.send({
-    embed: {
+    embeds: [{
       title: "1週間の検索パフォーマンス",
       description: `${startDate} 〜 ${endDate}`,
       fields
-    },
+    }],
   });
 }
 
