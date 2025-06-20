@@ -46,7 +46,7 @@ async function getSearchPerformance() {
 }
 
 async function sendToDiscord(data) {
-  // const webhook = new WebhookClient({ id: process.env.WEBHOOK_ID, token: process.env.WEBHOOK_TOKEN });
+  const webhook = new WebhookClient({ id: process.env.WEBHOOK_ID, token: process.env.WEBHOOK_TOKEN });
 
   const fields = Object.entries(data)
     .filter(([sub, stats]) => stats.clicks > 0)
